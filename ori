@@ -1,0 +1,29 @@
+import random
+import numpy as np
+
+def ori(num):
+    times=[[16],[8,8],[8,4,2,2],[8,2,2,2,2],[4,4,4,4],[2,2,2,2,2,2,2,2],
+       [4,4,2,2,2,2],[4,2,2,2,2,2,2],[8,2,2,1,1,1,1],[4,4,2,1,1]]
+    presenttime=[]
+    tutime=[]
+    songtime=[]
+    for x in range(num):
+        for i in range(4):
+    #在times里任选一个数组并随机排列
+            x=random.randint(0,len(times)-1)
+            presenttime=times[x]
+            random.shuffle(presenttime)
+
+    #添加上音符
+            for j in presenttime:
+                y=random.randint(0,11)
+                z=(j,y)
+                tutime.append(z)
+            songtime.append(tutime)
+            tutime=[]
+        print(songtime)
+        songtime=[]
+    return
+
+if __name__ == '__main__':
+       ori(100)
