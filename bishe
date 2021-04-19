@@ -1,0 +1,33 @@
+- 👋 Hi, I’m @xycm-ks
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+xycm-ks/xycm-ks is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+import random
+import numpy as np
+
+times=[[16],[8,8],[8,4,2,2],[8,2,2,2,2],[4,4,4,4],[2,2,2,2,2,2,2,2],
+       [4,4,2,2,2,2],[4,2,2,2,2,2,2],[8,2,2,1,1,1,1],[4,4,2,1,1]]
+presenttime=[]
+tutime=[]
+songtime=[]
+for i in range(4):
+    #在times里任选一个数组并随机排列
+    x=random.randint(0,len(times)-1)
+    presenttime=times[x]
+    random.shuffle(presenttime)
+    # print(presenttime)
+    #添加上音符
+    for j in presenttime:
+        y=random.randint(0,11)
+        z=(j,y)
+        tutime.append(z)
+    songtime.append(tutime)
+    tutime=[]
+print(songtime)
+
