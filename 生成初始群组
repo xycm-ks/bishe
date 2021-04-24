@@ -56,9 +56,4 @@ def ori(num):
             popular.append(temp_popular[c])
     return popular
 
-#编码
-#def decode(popular):
 
-if __name__ == '__main__':
-       popular=ori(200)
-       print(popular)
