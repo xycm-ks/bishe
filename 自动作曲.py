@@ -21,8 +21,8 @@ def transfer(statics,g,s):
                 d=58+2*num-2
             elif 11<=num:
                 d=58+2*num-3
-            track.append(Message('note_on', note=d, velocity=64, time=0, channel=0))
-            track.append(Message('note_off', note=d, velocity=64, time=a, channel=0))
+            track.append(Message('note_on', note=d, velocity=81, time=0, channel=0))
+            track.append(Message('note_off', note=d, velocity=81, time=a, channel=0))
     mid.save(f'第{g}代第{s}段.mid')
     return
 
